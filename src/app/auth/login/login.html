@@ -1,0 +1,38 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-100">
+  <form class="bg-white p-8 rounded shadow-md w-full max-w-sm">
+    <h2 class="text-2xl font-bold mb-6 text-center">Iniciar Sesión</h2>
+
+    <div class="mb-4">
+      <label for="usuario" class="block text-gray-700">Usuario</label>
+      <app-my-input
+        type="text"
+        id="usuario"
+        name="usuario"
+        placeholder="Ingrese su usuario"
+        class="w-full mt-1 p-2 border rounded"
+      ></app-my-input>
+    </div>
+
+    <div class="mb-4">
+      <label for="clave" class="block text-gray-700">Contraseña</label>
+      <app-my-input
+        type="password"
+        id="clave"
+        name="clave"
+        placeholder="Ingrese su contraseña"
+        class="w-full mt-1 p-2 border rounded"
+      ></app-my-input>
+    </div>
+
+    <app-my-button
+      type="submit"
+      buttonText="Ingresar"
+      class="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+    ></app-my-button>
+
+    <p class="mt-4 text-center text-sm">
+      ¿No tienes cuenta?
+      <a routerLink="/register" class="text-blue-500 hover:underline">Regístrate</a>
+    </p>
+  </form>
+</div>
