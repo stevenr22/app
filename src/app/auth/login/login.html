@@ -1,38 +1,29 @@
-<div class="min-h-screen flex items-center justify-center bg-gray-100">
-  <form class="bg-white p-8 rounded shadow-md w-full max-w-sm">
-    <h2 class="text-2xl font-bold mb-6 text-center">Iniciar Sesión</h2>
+<div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-100 to-white">
+  <form
+    class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md space-y-5 border border-gray-200"
+  >
+    <h2 class="text-3xl font-bold text-center text-gray-800">Iniciar sesión</h2>
+    <app-my-input
+      label="Usuario"
+      placeholder="Nombre de usuario"
+      className="bg-gray-50 border border-gray-300 focus:ring-green-400 focus:border-green-400 p-3 rounded-lg w-full shadow-sm"
+    ></app-my-input>
 
-    <div class="mb-4">
-      <label for="usuario" class="block text-gray-700">Usuario</label>
-      <app-my-input
-        type="text"
-        id="usuario"
-        name="usuario"
-        placeholder="Ingrese su usuario"
-        class="w-full mt-1 p-2 border rounded"
-      ></app-my-input>
-    </div>
-
-    <div class="mb-4">
-      <label for="clave" class="block text-gray-700">Contraseña</label>
-      <app-my-input
-        type="password"
-        id="clave"
-        name="clave"
-        placeholder="Ingrese su contraseña"
-        class="w-full mt-1 p-2 border rounded"
-      ></app-my-input>
-    </div>
-
-    <app-my-button
+    <app-my-input
+      label="Contraseña"
+      type="password"
+      placeholder="Mínimo 6 caracteres"
+      className="bg-gray-50 border border-gray-300 focus:ring-green-400 focus:border-green-400 p-3 rounded-lg w-full shadow-sm"
+    ></app-my-input>
+     <app-my-button
       type="submit"
-      buttonText="Ingresar"
-      class="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+      buttonText="Iniciar"
+      className="w-full bg-green-500 text-white py-3 px-4 rounded-lg font-semibold hover:bg-green-600 transition-all"
     ></app-my-button>
 
-    <p class="mt-4 text-center text-sm">
-      ¿No tienes cuenta?
-      <a routerLink="/register" class="text-blue-500 hover:underline">Regístrate</a>
+    <p class="text-center text-sm text-gray-600 pt-2">
+      ¿No tienes una cuenta?
+      <a routerLink="/register" class="text-green-600 hover:underline font-medium">Registra tus datos.</a>
     </p>
   </form>
 </div>

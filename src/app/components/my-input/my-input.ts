@@ -12,7 +12,7 @@ export class MyInput {
   @Input() id: string = "";
   @Input() name: string = "";
   @Input() placeholder: string = "";
-  @Input() class: string = "";
+  @Input() label: string = "";
  
 
 
