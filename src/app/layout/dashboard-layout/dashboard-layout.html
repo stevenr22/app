@@ -1,0 +1,139 @@
+<div class="min-h-screen flex flex-col bg-gray-50">
+
+    <!-- HEADER ---------------------------------------------------------------------------------------------------------------->
+    <header class="bg-white shadow p-4 flex justify-between items-center">
+        <h1 class="text-xl font-bold text-green-600">sysGI</h1>
+
+        <!-- Centro: Bienvenida -->
+        <div class="text-gray-700 font-medium text-center flex-1 mx-4 text-sm sm:text-base md:text-lg">
+            Bienvenido señor
+            <span class="font-semibold text-green-600">usuario</span>
+        </div>
+
+        <!-- icono -->
+        <!-- Botón con ícono de usuario e indicador de estado -->
+        <!-- CONTENEDOR -->
+        <div class="relative hidden md:flex items-center">
+
+            <!-- BOTÓN ICONO DE USUARIO CON INDICADOR -->
+            <button #userBtn (click)="toggleUserMenu()" aria-label="Usuario"
+                class="relative text-green-700 hover:text-green-900 cursor-pointer rounded-full border border-gray-300 bg-gray-100 w-10 h-10 flex items-center justify-center hover:bg-gray-200 hover:border-gray-400 transition">
+                <fa-icon [icon]="faUser" class="w-5 h-5"></fa-icon>
+                <span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 border-2 border-white rounded-full"
+                    title="Activo"></span>
+            </button>
+
+            <!-- SUBMENÚ OCULTO POR DEFECTO -->
+            <div #userMenu
+                class="absolute top-full right-0 mt-2 w-44 bg-white border rounded shadow z-50 text-sm text-gray-700 hidden">
+                <a routerLink="/perfil" class="block px-4 py-2 hover:bg-green-100">Perfil</a>
+                <a href="#" class="block px-4 py-2 hover:bg-green-100">Cambiar clave</a>
+                <hr class="border-gray-200" />
+                <a href="/" class="block px-4 py-2 hover:bg-red-100 text-red-600">Cerrar sesión</a>
+            </div>
+        </div>
+        <!-- Botón hamburguesa móvil -->
+        <button class="md:hidden text-gray-600" (click)="toggleSidebar()">
+            <fa-icon [icon]="faBars" class="h-6 w-6"></fa-icon>
+        </button>
+
+    </header>
+    <!-- END HEADER-------------------------------------------------------------------------------------------------------------- -->
+    
+    <!-- NAV  ---------------------------------------------------------------------------------------------------------------------->
+    <nav
+        class="hidden md:flex items-center gap-6 px-6 py-2 bg-white shadow-sm font-medium text-green-700 relative z-10 mt-2">
+
+        <!-- Enlace directo -->
+        <a routerLink="/dashboard" class="flex items-center gap-1 hover:text-green-900 transition">
+            <fa-icon [icon]="faHome"></fa-icon>
+            <span>Inicio</span>
+        </a>
+
+        <!-- Menú desplegable: Mi cuenta -->
+        <div class="relative group">
+            <button class="flex items-center gap-1 hover:text-green-900 transition focus:outline-none">
+                <fa-icon [icon]="faUser"></fa-icon>
+                <span>Mi cuenta</span>
+                <fa-icon [icon]="faChevronDown"
+                    class="transition-transform duration-200 group-hover:rotate-180"></fa-icon>
+            </button>
+            <ul
+                class="absolute left-0 mt-2 w-44 bg-white border rounded shadow-md text-sm text-gray-700 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition duration-200">
+                <li><a routerLink="/perfil" class="block px-4 py-2 hover:bg-green-100">Perfil</a></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-green-100">Cambiar clave</a></li>
+            </ul>
+        </div>
+
+        <!-- Menú desplegable: Configuración -->
+        <div class="relative group">
+            <button class="flex items-center gap-1 hover:text-green-900 transition focus:outline-none">
+                <fa-icon [icon]="faCog"></fa-icon>
+                <span>Configuración</span>
+                <fa-icon [icon]="faChevronDown"
+                    class="transition-transform duration-200 group-hover:rotate-180"></fa-icon>
+            </button>
+            <ul
+                class="absolute left-0 mt-2 w-44 bg-white border rounded shadow-md text-sm text-gray-700 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition duration-200">
+                <li><a href="#" class="block px-4 py-2 hover:bg-green-100">General</a></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-green-100">Notificaciones</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- END NAV-------------------------------------------------------------------------------------------------------------- -->
+
+
+
+    <!-- ASIDE móvil (sidebar lateral) -->
+    <aside
+        class="md:hidden fixed inset-y-0 left-0 w-64 bg-white shadow z-50 transform transition-transform duration-300"
+        [class.-translate-x-full]="!isSidebarOpen" [class.translate-x-0]="isSidebarOpen">
+        <nav class="flex flex-col h-full p-4 justify-between">
+            <div class="space-y-2">
+                <a routerLink="/dashboard"
+                    class="block px-4 py-2 rounded hover:bg-green-100 text-green-700 font-semibold">
+                    <fa-icon [icon]="faHome" class="mr-2"></fa-icon>Inicio
+                </a>
+
+                <details class="group">
+                    <summary
+                        class="flex justify-between items-center px-4 py-2 rounded cursor-pointer hover:bg-green-100 text-green-700 font-semibold list-none">
+                        <span><fa-icon [icon]="faUser" class="mr-2"></fa-icon>Mi cuenta</span>
+                        <fa-icon [icon]="faChevronDown"
+                            class="transition-transform duration-200 group-open:rotate-180"></fa-icon>
+                    </summary>
+                    <div class="pl-6 mt-1 space-y-1">
+                        <a routerLink="/perfil" class="block px-2 py-1 rounded hover:bg-green-50 text-sm">Perfil</a>
+                        <a href="#" class="block px-2 py-1 rounded hover:bg-green-50 text-sm">Cambiar clave</a>
+                    </div>
+                </details>
+
+                <details class="group">
+                    <summary
+                        class="flex justify-between items-center px-4 py-2 rounded cursor-pointer hover:bg-green-100 text-green-700 font-semibold list-none">
+                        <span><fa-icon [icon]="faCog" class="mr-2"></fa-icon>Configuración</span>
+                        <fa-icon [icon]="faChevronDown"
+                            class="transition-transform duration-200 group-open:rotate-180"></fa-icon>
+                    </summary>
+                    <div class="pl-6 mt-1 space-y-1">
+                        <a href="#" class="block px-2 py-1 rounded hover:bg-green-50 text-sm">General</a>
+                        <a href="#" class="block px-2 py-1 rounded hover:bg-green-50 text-sm">Notificaciones</a>
+                    </div>
+                </details>
+            </div>
+
+            <div>
+                <hr class="my-4 border-green-300" />
+                <a href="/" class="block px-4 py-2 rounded hover:bg-green-100 text-green-600 font-semibold">
+                    <fa-icon [icon]="faSignOutAlt" class="mr-2"></fa-icon>Cerrar sesión
+                </a>
+            </div>
+        </nav>
+    </aside>
+    <!-- END ASIDE----------------------------------------------------------------------------------------------- -->
+
+    <!-- MAIN contenido principal -->
+    <main class="flex-1 p-6">
+       
+    </main>
+</div>
