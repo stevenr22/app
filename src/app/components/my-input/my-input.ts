@@ -14,6 +14,4 @@ export class MyInput {
   @Input() placeholder: string = "";
   @Input() label: string = "";
  
-
-
 }

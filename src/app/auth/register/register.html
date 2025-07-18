@@ -1,45 +1,24 @@
 <div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-100 to-white">
-  <form
-    class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md space-y-5 border border-gray-200"
-  >
+  <!-- FORMULARIO LOGIN -->
+  <form class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md space-y-5 border border-gray-200">
+
     <h2 class="text-3xl font-bold text-center text-gray-800">Crear cuenta</h2>
 
-    <app-my-input
-      label="Usuario"
-      placeholder="Nombre de usuario"
-      className="bg-gray-50 border border-gray-300 focus:ring-green-400 focus:border-green-400 p-3 rounded-lg w-full shadow-sm"
-    ></app-my-input>
+    <app-my-input label="Usuario" type="text" id="user" name="user" placeholder="Nombre de usuario"></app-my-input>
 
-    <app-my-input
-      label="Correo electrónico"
-      type="email"
-      placeholder="ejemplo@correo.com"
-      className="bg-gray-50 border border-gray-300 focus:ring-green-400 focus:border-green-400 p-3 rounded-lg w-full shadow-sm"
-    ></app-my-input>
+    <app-my-input label="Correo electrónico" id="correo" name="correo" type="email" placeholder="ejemplo@correo.com"></app-my-input>
 
-    <app-my-input
-      label="Contraseña"
-      type="password"
-      placeholder="Mínimo 6 caracteres"
-      className="bg-gray-50 border border-gray-300 focus:ring-green-400 focus:border-green-400 p-3 rounded-lg w-full shadow-sm"
-    ></app-my-input>
+    <app-my-input label="Contraseña" id="clave" name="clave" type="password" placeholder="Mínimo 6 caracteres"></app-my-input>
 
-    <app-my-input
-      label="Confirmar contraseña"
-      type="password"
-      placeholder="Repite tu contraseña"
-      className="bg-gray-50 border border-gray-300 focus:ring-green-400 focus:border-green-400 p-3 rounded-lg w-full shadow-sm"
-    ></app-my-input>
+    <app-my-input label="Confirmar contraseña" id="claveConfirm" name="claveConfirm" type="password" placeholder="Repite tu contraseña"></app-my-input>
 
-    <app-my-button
-      type="submit"
-      buttonText="Registrarse"
-      className="w-full bg-green-500 text-white py-3 px-4 rounded-lg font-semibold hover:bg-green-600 transition-all"
-    ></app-my-button>
+    <app-my-button type="submit" buttonText="Registrar" variant="verde"></app-my-button>
 
     <p class="text-center text-sm text-gray-600 pt-2">
       ¿Ya tienes una cuenta?
       <a routerLink="/login" class="text-green-600 hover:underline font-medium">Inicia sesión</a>
     </p>
+
   </form>
+  <!-- END FORMULARIO -->
 </div>
