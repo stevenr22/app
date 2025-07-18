@@ -5,15 +5,14 @@
     <h2 class="text-3xl font-bold text-center text-gray-800">Iniciar sesión</h2>
     <app-my-input
       label="Usuario"
+      type="text"
       placeholder="Nombre de usuario"
-      className="bg-gray-50 border border-gray-300 focus:ring-green-400 focus:border-green-400 p-3 rounded-lg w-full shadow-sm"
     ></app-my-input>
 
     <app-my-input
       label="Contraseña"
       type="password"
       placeholder="Mínimo 6 caracteres"
-      className="bg-gray-50 border border-gray-300 focus:ring-green-400 focus:border-green-400 p-3 rounded-lg w-full shadow-sm"
     ></app-my-input>
      <app-my-button
       type="submit"
@@ -23,7 +22,7 @@
 
     <p class="text-center text-sm text-gray-600 pt-2">
       ¿No tienes una cuenta?
-      <a routerLink="/register" class="text-green-600 hover:underline font-medium">Registra tus datos.</a>
+      <a routerLink="/register" class="text-green-600 hover:underline font-medium  ">Registra tus datos.</a>
     </p>
   </form>
 </div>
