@@ -1,4 +1,8 @@
-<div class="min-h-screen flex flex-col items-center justify-center px-4 py-12 bg-gradient-to-br from-gray-100 to-white text-center">
+<div
+  class="min-h-screen flex flex-col items-center justify-center px-4 py-12 bg-gradient-to-br from-gray-100 to-white text-center"
+  role="main"
+  aria-labelledby="error-title"
+>
   <!-- Imagen de error 404 optimizada -->
   <div class="w-full max-w-md">
     <img
@@ -6,14 +10,18 @@
       priority
       width="600"
       height="400"
-      alt="Imagen no encontrada"
+      alt="Imagen que indica página no encontrada"
       class="w-full h-auto object-contain mb-6"
+      decoding="async"
+      loading="eager"
     />
   </div>
 
-  <h1 class="text-5xl font-bold text-gray-800 mb-2">404</h1>
-  <h2 class="text-2xl font-semibold text-gray-700 mb-4">Página no encontrada</h2>
-  <p class="text-gray-600 mb-6">La página que buscas no existe o fue movida, señor.</p>
+  <h1 id="error-title" class="text-6xl font-extrabold text-gray-900 mb-2">404</h1>
+  <h2 class="text-3xl font-semibold text-gray-700 mb-4">Página no encontrada</h2>
+  <p class="text-gray-600 mb-8 max-w-md mx-auto">
+    La página que buscas no existe o fue movida. Por favor, verifica la URL o regresa al inicio.
+  </p>
 
   <!-- Botón reutilizable -->
   <app-my-button
@@ -21,5 +29,6 @@
     type="button"
     variant="azul"
     buttonText="Volver a la página de inicio"
+    class="px-6 py-3 text-lg"
   ></app-my-button>
 </div>
