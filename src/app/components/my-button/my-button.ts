@@ -9,7 +9,6 @@ import { Component, Input } from '@angular/core';
 export class MyButton {
   @Input() type: string = "";
   @Input() id: string = "";
-  @Input() className: string = ""; //clase personalizada
   @Input() buttonText: string = "";
 
 
