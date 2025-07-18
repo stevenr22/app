@@ -1,75 +1,79 @@
-  <!-- Título -->
-  <h2 class="text-3xl font-bold text-green-700">Panel principal</h2>
+<h2 class="text-3xl font-bold text-green-700 mb-6">Panel principal</h2>
 
-  <!-- Sección de tarjetas -->
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Sección de tarjetas -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
     <div class="bg-white shadow-md rounded-2xl p-5 border border-gray-100">
-      <p class="text-sm text-gray-500">Ventas hoy</p>
-      <p class="text-3xl font-extrabold text-green-700">$320</p>
+        <p class="text-sm text-gray-500">Ventas hoy</p>
+        <p class="text-3xl font-extrabold text-green-700">$320</p>
     </div>
     <div class="bg-white shadow-md rounded-2xl p-5 border border-gray-100">
-      <p class="text-sm text-gray-500">Usuarios</p>
-      <p class="text-3xl font-extrabold text-green-700">128</p>
+        <p class="text-sm text-gray-500">Usuarios</p>
+        <p class="text-3xl font-extrabold text-green-700">128</p>
     </div>
     <div class="bg-white shadow-md rounded-2xl p-5 border border-gray-100">
-      <p class="text-sm text-gray-500">Pedidos</p>
-      <p class="text-3xl font-extrabold text-green-700">45</p>
+        <p class="text-sm text-gray-500">Pedidos</p>
+        <p class="text-3xl font-extrabold text-green-700">45</p>
     </div>
     <div class="bg-white shadow-md rounded-2xl p-5 border border-gray-100">
-      <p class="text-sm text-gray-500">Soporte</p>
-      <p class="text-3xl font-extrabold text-green-700">12</p>
+        <p class="text-sm text-gray-500">Soporte</p>
+        <p class="text-3xl font-extrabold text-green-700">12</p>
     </div>
-  </div>
+</section>
 
-  <!-- Tabla -->
-  <div class="bg-white shadow-md rounded-xl overflow-x-auto border border-gray-100">
+<!-- Tabla -->
+<div class="bg-white shadow-md rounded-xl overflow-x-auto border border-gray-100">
     <table class="min-w-full text-sm text-left">
-      <thead class="bg-green-100 text-green-700">
-        <tr>
-          <th class="px-6 py-3">#</th>
-          <th class="px-6 py-3">Nombre</th>
-          <th class="px-6 py-3">Correo</th>
-          <th class="px-6 py-3">Estado</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="border-t hover:bg-gray-50">
-          <td class="px-6 py-4">1</td>
-          <td class="px-6 py-4">Steven Rojas</td>
-          <td class="px-6 py-4">stevenexample.com</td>
-          <td class="px-6 py-4 text-green-600 font-semibold">Activo</td>
-        </tr>
-        <tr class="border-t hover:bg-gray-50">
-          <td class="px-6 py-4">2</td>
-          <td class="px-6 py-4">Nicole Vega</td>
-          <td class="px-6 py-4">nicoleexample.com</td>
-          <td class="px-6 py-4 text-yellow-600 font-semibold">Pendiente</td>
-        </tr>
-      </tbody>
+        <thead class="bg-green-100 text-green-700">
+            <tr>
+                <th class="px-6 py-3">#</th>
+                <th class="px-6 py-3">Nombre</th>
+                <th class="px-6 py-3">Correo</th>
+                <th class="px-6 py-3">Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="border-t hover:bg-gray-50">
+                <td class="px-6 py-4">1</td>
+                <td class="px-6 py-4">Steven Rojas</td>
+                <td class="px-6 py-4">stevenexample.com</td>
+                <td class="px-6 py-4 text-green-600 font-semibold">Activo</td>
+            </tr>
+            <tr class="border-t hover:bg-gray-50">
+                <td class="px-6 py-4">2</td>
+                <td class="px-6 py-4">Nicole Vega</td>
+                <td class="px-6 py-4">nicoleexample.com</td>
+                <td class="px-6 py-4 text-yellow-600 font-semibold">Pendiente</td>
+            </tr>
+        </tbody>
     </table>
-  </div>
+</div>
 
-  <!-- Formulario -->
-  <form class="bg-white shadow-md rounded-xl p-6 space-y-4 border border-gray-100">
-    <h3 class="text-xl font-semibold text-gray-700">Formulario de contacto</h3>
+<!-- Formulario -->
+<section class="bg-white shadow-md rounded-xl p-6 space-y-4 border border-gray-100">
+    <h3 class="text-xl font-semibold text-gray-700 mb-4">Formulario de contacto</h3>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <div>
-        <label class="block text-gray-600 mb-1">Nombre</label>
-        <input type="text" class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-300" />
-      </div>
-      <div>
-        <label class="block text-gray-600 mb-1">Correo</label>
-        <input type="email" class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-300" />
-      </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+            <label class="block text-gray-600 mb-1">Nombre</label>
+            <input type="text"
+                class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-300" />
+        </div>
+        <div>
+            <label class="block text-gray-600 mb-1">Correo</label>
+            <input type="email"
+                class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-300" />
+        </div>
     </div>
 
     <div>
-      <label class="block text-gray-600 mb-1">Mensaje</label>
-      <textarea class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-300" rows="4"></textarea>
+        <label class="block text-gray-600 mb-1">Mensaje</label>
+        <textarea class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-300"
+            rows="4"></textarea>
     </div>
 
-    <button type="submit" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition">
-      Enviar
-    </button>
-  </form>
+    <div>
+        <button type="submit" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition">
+            Enviar
+        </button>
+    </div>
+</section>
