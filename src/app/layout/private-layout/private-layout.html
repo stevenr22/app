@@ -2,7 +2,7 @@
 
     <!-- HEADER ---------------------------------------------------------------------------------------------------------------->
     <header class="bg-white shadow p-4 flex justify-between items-center">
-        <h1 class="text-xl font-bold text-green-600">sysGI</h1>
+        <h1 class="text-xl font-bold text-green-600 cursor-pointer" routerLink="/panel">sysGI</h1>
 
         <!-- Centro: Bienvenida -->
         <div class="text-gray-700 font-medium text-center flex-1 mx-4 text-sm sm:text-base md:text-lg">
@@ -26,7 +26,7 @@
             <!-- SUBMENÚ OCULTO POR DEFECTO -->
             <div #userMenu
                 class="absolute top-full right-0 mt-2 w-44 bg-white border rounded shadow z-50 text-sm text-gray-700 hidden">
-                <a routerLink="/perfil" class="block px-4 py-2 hover:bg-green-100">Perfil</a>
+                <a href="/panel/perfil" class="block px-4 py-2 hover:bg-green-100">Perfil</a>
                 <a href="#" class="block px-4 py-2 hover:bg-green-100">Cambiar clave</a>
                 <hr class="border-gray-200" />
                 <a href="/" class="block px-4 py-2 hover:bg-red-100 text-red-600">Cerrar sesión</a>
@@ -60,7 +60,7 @@
             </button>
             <ul
                 class="absolute left-0 mt-2 w-44 bg-white border rounded shadow-md text-sm text-gray-700 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition duration-200">
-                <li><a routerLink="/perfil" class="block px-4 py-2 hover:bg-green-100">Perfil</a></li>
+                <li><a href="/panel/perfil" class="block px-4 py-2 hover:bg-green-100">Perfil</a></li>
                 <li><a href="#" class="block px-4 py-2 hover:bg-green-100">Cambiar clave</a></li>
             </ul>
         </div>
@@ -103,7 +103,7 @@
                             class="transition-transform duration-200 group-open:rotate-180"></fa-icon>
                     </summary>
                     <div class="pl-6 mt-1 space-y-1">
-                        <a routerLink="/perfil" class="block px-2 py-1 rounded hover:bg-green-50 text-sm">Perfil</a>
+                        <a href="/panel/perfil" class="block px-2 py-1 rounded hover:bg-green-50 text-sm">Perfil</a>
                         <a href="#" class="block px-2 py-1 rounded hover:bg-green-50 text-sm">Cambiar clave</a>
                     </div>
                 </details>
@@ -134,6 +134,6 @@
 
     <!-- MAIN contenido principal -->
     <main class="flex-1 p-6">
-       
+       <router-outlet></router-outlet>
     </main>
 </div>

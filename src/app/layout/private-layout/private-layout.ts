@@ -3,14 +3,14 @@ import { faBars, faChevronDown, faCog, faHome, faSignOutAlt, faUser } from '@for
 import { FaIconComponent } from "@fortawesome/angular-fontawesome";
 import { RouterModule } from '@angular/router';
 @Component({
-  selector: 'app-dashboard-layout',
+  selector: 'app-private-layout',
   standalone: true,
   imports: [FaIconComponent, RouterModule],
-  templateUrl: './dashboard-layout.html',
-  styleUrl: './dashboard-layout.css'
+  templateUrl: './private-layout.html',
+  styleUrl: './private-layout.css'
 })
-export class DashboardLayout {
-  isSidebarOpen = false;
+export class PrivateLayout {
+ isSidebarOpen = false;
 
   faBars = faBars;
   faHome = faHome;
