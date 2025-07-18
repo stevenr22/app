@@ -1,10 +1,27 @@
-<main class="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8">
-  <div class="text-center">
-    <p class="text-base font-semibold text-green-600">404</p>
-    <h1 class="mt-4 text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-7xl">Página no encontrada.</h1>
-    <p class="mt-6 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">Lo siento, esta página no existe o esta fuera de servicio.</p>
-    <div class="mt-10 flex items-center justify-center gap-x-6">
-        <app-my-button type="button" variant="verde" buttonText="Ir al inicio." routerLink="/"></app-my-button>
+<main
+  class="grid min-h-screen place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8"
+  role="main"
+  aria-labelledby="error-title"
+>
+  <div class="max-w-md text-center">
+    <p class="text-base font-semibold text-green-600" aria-label="Código de error">404</p>
+    <h1
+      id="error-title"
+      class="mt-4 text-5xl font-extrabold tracking-tight text-gray-900 sm:text-7xl"
+    >
+      Página no encontrada
+    </h1>
+    <p class="mt-6 text-lg text-gray-500 sm:text-xl">
+      Lo siento, esta página no existe o está fuera de servicio.
+    </p>
+    <div class="mt-10 flex justify-center">
+      <app-my-button
+        type="button"
+        variant="verde"
+        buttonText="Ir al inicio"
+        routerLink="/"
+        aria-label="Volver a la página principal"
+      ></app-my-button>
     </div>
   </div>
 </main>
